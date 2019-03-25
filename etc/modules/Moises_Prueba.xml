@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Moises_Prueba>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Moises_Prueba>
+    </modules>
+</config>

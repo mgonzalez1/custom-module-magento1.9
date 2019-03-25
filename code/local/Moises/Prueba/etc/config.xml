@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Moises_Prueba>
+            <version>0.0.1</version>
+        </Moises_Prueba>
+    </modules>
+        
+        
+    <global>
+        <blocks>
+            <moises_prueba>
+                <class>Moises_Prueba_Block</class>
+            </moises_prueba>
+        </blocks>
+        <helpers>
+            <Prueba>
+                <class>Moises_Prueba_Helper</class>
+            </Prueba>  
+        </helpers>
+    </global>        
+        
+        
+    <admin>
+        <routers>
+            <prueba>
+                <use>admin</use>
+                <args>
+                    <module>Moises_Prueba</module>
+                    <frontName>prueba</frontName>
+                </args>
+            </prueba>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <moises_prueba after="Mage_Adminhtml">Moises_Prueba_Adminhtml</moises_prueba>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    
+    
+    <adminhtml>
+        <menu>
+            <menu1 translate="title" module="Prueba">
+                <title>Moises Prueba</title>
+                <sort_order>1</sort_order>
+                <children>
+                    <menuitem1 module="Prueba">
+                        <title>Menu item 1</title>
+                        <action>prueba/example</action>
+                    </menuitem1>
+                </children>                
+            </menu1>
+        </menu>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <menu1 translate="title" module="Prueba">
+							<title>Moises Prueba</title>
+                			<sort_order>1</sort_order>
+                            <children>
+                                <menuitem1>
+                                    <title>Menu item 1</title>
+                                </menuitem1>
+                            </children>
+                       </menu1>
+                   </children>
+               </admin>
+           </resources>
+        </acl>
+    </adminhtml>    
+    
+</config>
